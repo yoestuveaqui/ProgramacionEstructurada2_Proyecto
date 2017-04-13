@@ -1,9 +1,12 @@
 #include <iostream>
+#include <iomanip>
+#include "Cabecera.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    mensaje MensajeTitulo;
+    MensajeTitulo.tituloCabecera();
     return 0;
 }
