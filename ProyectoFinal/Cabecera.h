@@ -1,4 +1,6 @@
 #include<iostream>
+#include<string>
+#include<conio2.h>
 
 using namespace std;
 
@@ -13,6 +15,7 @@ class Mensaje{
         int menuAdministrador();
         int menuCliente();
         int menuDepartamentos();
+        string tipoCliente();
 };
 
 class MensajeBebe{
@@ -20,6 +23,16 @@ class MensajeBebe{
 
     public:
 
+};
+
+class Seguridad{
+private:
+    string password;
+    string usuario;
+    int contador=0;
+    char letra;
+public:
+    bool menuLogeo();
 };
 
 void Mensaje::tituloCabecera(){
@@ -73,7 +86,9 @@ int  Mensaje::menuCliente(){
 }
 
 int Mensaje::menuDepartamentos(){
-    cout<<"\t\t\t----------------------------"<<endl;
+    cout<<"\t\t\t-------------------------------------------"<<endl;
+    cout<<"\t\t\t  Bienvedo(a) al Departamento de "<<tipoCliente()<<endl;
+    cout<<"\t\t\t-------------------------------------------"<<endl;
     cout<<"\t\t\t 1- Camisas"<<endl;
     cout<<"\t\t\t 2- Pantalones"<<endl;
     cout<<"\t\t\t 3- Zapatos"<<endl;
@@ -85,7 +100,51 @@ int Mensaje::menuDepartamentos(){
     return opcionDepartamentos;
 }
 
+string Mensaje::tipoCliente(){
+    switch(menuCliente()){
+    case 1:
+        return "Hombre";
+        break;
+    case 2:
+        return "Mujer";
+        break;
+    case 3:
+        return "Jovenes";
+        break;
+    case 4:
+        return "Bebes";
+        break;
+    default:
+        cout<<"Opcion Invalida"<<endl;
+        break;
+    }
+}
 
+bool Seguridad::menuLogeo(){
+    cout<<"\t\t\t****************************"<<endl;
+    cout<<"\t\t\tUsuario"<<endl;
+    cout<<"\t\t\t-> ";
+    cin>>usuario;
+    cout<<"\t\t\tContrasenia"<<endl;
+    cout<<"\t\t\t-> ";
+    while(letra!=13){
+        letra=getch();
+        password[contador]=letra;
+        cout<<"*";
+        contador++;
+    }
+    password[contador-1]='\0';
+    cout<<"\t\t\t****************************"<<endl;
+    if(usuario=="root"&&password=="moose"){
+        cout<<"\t\t\tAdvertencia use esta herramienta con precaucion"<<endl;
+        cout<<"\t\t\tBienvenido "<<usuario;
+        return true;
+    }
+    else{
+        cout<<"\t\t\tUsuario o contrasenia invalidos"<<endl;
+        return false;
+    }
+}
 
 
 
