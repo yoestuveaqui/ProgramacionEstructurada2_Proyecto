@@ -1,22 +1,44 @@
 #include<iostream>
 #include<cstdlib>
+#include<locale>
 #include "Cabecera.h"
+#include "ArticulosRopa.h"
 
 int main(){
+    setlocale(LC_ALL, "spanish");
     string bandera="S";
     string opcionCliente;
     Mensaje titulo, Menu;
     Seguridad Sesion;
-    titulo.tituloCabecera();
-    system("pause");
     while(bandera=="S"||bandera=="s"){
         system("cls");
         switch(Menu.menuPrincipal()){
         case 1:
+            system("cls");
+            titulo.tituloCabecera();
             if(Sesion.menuLogeo()==false){
+
             }
             else{
-
+                system("cls");
+                switch(Menu.menuAdministrador()){
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    exit(0);
+                    break;
+                default:
+                    cout<<"\t\t\tOpción ingresada es invalida"<<endl;
+                    break;
+                }
             }
             break;
         case 2:
@@ -28,11 +50,11 @@ int main(){
             exit(0);
 
         default:
-            cout<<"Opcion Invalida"<<endl;
+            cout<<"Opción Invalida"<<endl;
 
         }
         cout<<"\t\t\tDesea volver al menur principal? S/N"<<endl;
-        cout<<"\t\t\tIngrese una opcion [ ]\b\b";
+        cout<<"\t\t\tIngrese una opción [ ]\b\b";
         cin>>bandera;
     }
     return 0;
