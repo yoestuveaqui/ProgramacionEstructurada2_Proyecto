@@ -14,7 +14,8 @@ demas integrantes por lo cual vamos a estandarizarnos con las siguientes rubicas
 6) Usar librerias para c++.
 7) Se llevara a cabo un manejo de versiones de los codigos.
 8) Ser los mas eficiente posibles.
-9) Tratar en lo posible cumplir lo anterior
+9) En caso necesario que se repita dos veces el nombre de una variable dos veces una debe de iniciar en Mayuscula y la otra en minuscula
+10) Tratar en lo posible cumplir lo anterior
 
 --------------------------------------------
 Si lo puedes imaginar, lo puedes programar
