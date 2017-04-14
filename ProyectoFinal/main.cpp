@@ -1,6 +1,5 @@
 #include<iostream>
 #include<cstdlib>
-#include<string>
 #include "Cabecera.h"
 
 int main(){
@@ -9,15 +8,15 @@ int main(){
     Mensaje titulo, Menu;
     Seguridad Sesion;
     titulo.tituloCabecera();
+    system("pause");
     while(bandera=="S"||bandera=="s"){
         system("cls");
         switch(Menu.menuPrincipal()){
         case 1:
             if(Sesion.menuLogeo()==false){
-                cout<<"Alto ahi malechor"<<endl;
             }
             else{
-                cout<<"Todo tuani"<<endl;
+
             }
             break;
         case 2:
