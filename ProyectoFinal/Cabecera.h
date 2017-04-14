@@ -1,6 +1,8 @@
 #include<iostream>
 #include<string>
 #include<conio2.h>
+#define Usuario "root"
+#define Password "yofui"
 
 using namespace std;
 
@@ -18,9 +20,9 @@ class Mensaje{
         string tipoCliente();
 };
 
-class MensajeBebe{
+class MensajeBebe : public Mensaje{
     private:
-
+        opcionBebes;
     public:
 
 };
@@ -29,10 +31,10 @@ class Seguridad{
 private:
     string password;
     string usuario;
-    int contador=0;
     char letra;
 public:
     bool menuLogeo();
+    string contrasenia();
 };
 
 void Mensaje::tituloCabecera(){
@@ -87,7 +89,7 @@ int  Mensaje::menuCliente(){
 
 int Mensaje::menuDepartamentos(){
     cout<<"\t\t\t-------------------------------------------"<<endl;
-    cout<<"\t\t\t  Bienvedo(a) al Departamento de "<<tipoCliente()<<endl;
+    cout<<"\t\t\t  Bienvenido(a) al Departamento de "<<tipoCliente()<<endl;
     cout<<"\t\t\t-------------------------------------------"<<endl;
     cout<<"\t\t\t 1- Camisas"<<endl;
     cout<<"\t\t\t 2- Pantalones"<<endl;
@@ -127,17 +129,12 @@ bool Seguridad::menuLogeo(){
     cin>>usuario;
     cout<<"\t\t\tContrasenia"<<endl;
     cout<<"\t\t\t-> ";
-    while(letra!=13){
-        letra=getch();
-        password[contador]=letra;
-        cout<<"*";
-        contador++;
-    }
-    password[contador-1]='\0';
+    contrasenia();
+    cout<<endl;
     cout<<"\t\t\t****************************"<<endl;
-    if(usuario=="root"&&password=="moose"){
+    if(usuario==Usuario&&password==Password){
         cout<<"\t\t\tAdvertencia use esta herramienta con precaucion"<<endl;
-        cout<<"\t\t\tBienvenido "<<usuario;
+        cout<<"\t\t\tBienvenido "<<usuario<<endl;
         return true;
     }
     else{
@@ -146,7 +143,24 @@ bool Seguridad::menuLogeo(){
     }
 }
 
-
+string Seguridad::contrasenia(){
+    char letra;
+    letra=getch();
+    password="";
+    while(letra!=13){
+        if(letra!=8){
+            password.push_back(letra);
+        }
+        else{
+            if(password.length()>0){
+                cout<<"\b\b";
+                password=password.substr(0, password.length()-1);
+            }
+        }
+        letra=getch();
+    }
+    return password;
+}
 
 
 
