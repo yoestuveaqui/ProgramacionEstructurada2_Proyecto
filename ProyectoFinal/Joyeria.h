@@ -1,4 +1,5 @@
 #include<iostream>
+#include<fstream>
 
 struct registroJoyeria{
     string codigo;
@@ -14,3 +15,8 @@ struct registroJoyeria{
     int cantidad;
 
 };
+
+ofstream fEscritura("TiendaJoyeria.dat", ios::out |ios::binary);
+ifstream fLectura("TiendaJoyeria.dat", ios::out |ios::binary);
+
+registroJoyeria entradaJ, saslidaJ;
