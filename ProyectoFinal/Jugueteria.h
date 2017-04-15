@@ -16,3 +16,8 @@ ofstream fEscritura("TiendaJoyeria.dat", ios::out |ios::binary);
 ifstream fLectura("TiendaJoyeria.dat", ios::out |ios::binary);
 
 registroJugueteria entradaJt, salidaJt;
+
+
+
+
+trololololololoolo
