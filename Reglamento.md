@@ -11,7 +11,7 @@ demas integrantes por lo cual vamos a estandarizarnos con las siguientes rubicas
 4) Las funciones y procedimientos de igual manera se escribiran segun las reglas 2 y 3, añadiendo 
    que para buenas practicas deben de llevar un verbo que indique su utilidad (funcion1 | ingresoArticulos).
 5) No hacer modificaciones del compañero sin cprevio consetimiento.
-6) Usar librerias para c++.
+6) Usar librerias para c++ y en en ocasiones contadas de c.
 7) Se llevara a cabo un manejo de versiones de los codigos.
 8) Ser los mas eficiente posibles.
 9) En caso necesario que se repita dos veces el nombre de una variable dos veces una debe de iniciar en Mayuscula y la otra en minuscula
