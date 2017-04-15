@@ -5,7 +5,7 @@
 #include "ArticulosRopa.h"
 
 int main(){
-    setlocale(LC_ALL, "spanish");
+    setlocale(LC_ALL, "spanish");// Para poder imprimir las tildes y la ñ
     string bandera="S";
     string opcionCliente;
     Mensaje titulo, Menu;
