@@ -1,6 +1,15 @@
-#ifndef ARTICULOSROPA_H_INCLUDED
-#define ARTICULOSROPA_H_INCLUDED
+#include<fstream>
+#include<iostream>
 
+using namespace std;
 
+typedef struct Registro{
+    string nombreArticulo;
+    string marca;
+    string estiloArticulo;
+    string talla;
+    float precio;
+    string color;
+    int inventario;
+};
 
-#endif // ARTICULOSROPA_H_INCLUDED
